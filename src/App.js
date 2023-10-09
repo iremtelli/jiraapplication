@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css"
+import TaskCreate from "./Componenets/TaskCreate"
+import TaskList from "./Componenets/TaskList"
+import { useEffect, useContext } from "react"
+import taskList from "./api/db.json"
+import TasksContext from "./Componenets/context/task"
 
 function App() {
+  const { fetchTask } = useContext(TasksContext)
+
+  useEffect(() => {
+    fetchTask()
+  }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TaskCreate />
+      <h1>Görevler</h1>
+      <TaskList />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -1,38 +1,78 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.task-create {
+  width: 450px;
+}
+.task-update {
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.task-form {
+  display: flex;
+  flex-direction: column;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.task-label {
+  margin: 10px 0px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.task-input {
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.task-area {
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+button {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: green;
+  color: aliceblue;
+  border-radius: 10px;
+  font-size: 20px;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+.update-button {
+  background-color: blueviolet;
+}
+.task-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.task-show {
+  border: 1px solid green;
+  border-radius: 30px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 20px;
 }
-
-.App-link {
-  color: #61dafb;
+.task-delete {
+  padding: 5px;
+  font-size: 15px;
+  width: 60px;
+  border: none;
+  border-radius: 30px;
+  background-color: red;
+  color: aliceblue;
+  margin-left: 10px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.task-title {
+  margin-bottom: 5px;
+}
+.task-edit {
+  padding: 5px;
+  font-size: 15px;
+  width: 100px;
+  border: none;
+  border-radius: 30px;
+  background-color: rgb(10, 17, 160);
+  color: aliceblue;
+  margin-left: 10px;
 }
